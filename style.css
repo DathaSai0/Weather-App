@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+}
+
+#inputDiv input {
+  width: 500px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 10px;
+}
+#inputDiv button {
+  border: none;
+  height: 45px;
+  width: 75px;
+  background-color: black;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 20px;
+}
+#resultDiv {
+  font-size: 30px;
+}
+#resultDiv img {
+  height: 200px;
+  width: 200px;
+  margin-bottom: 50px;
+}
+.temp,
+#weather-desc,
+#Name {
+  margin-bottom: 20px;
+}
