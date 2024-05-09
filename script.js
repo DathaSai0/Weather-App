@@ -3,6 +3,7 @@ let input = document.querySelector("#inputDiv input");
 let des = document.querySelector("#weather-desc");
 let Temp = document.querySelector("#temp-value");
 let Name = document.querySelector("#Name");
+let res = document.querySelector('#resultImg');
 const APIKey = "3dda862b68989ef1dd87c929cb493640";
 btnGet.addEventListener("click", () => {
   let loc = document.querySelector("#inputDiv input").value;
@@ -27,10 +28,14 @@ btnGet.addEventListener("click", () => {
 });
 
 function renderUI(data) {
+  console.log(data)
   const { name } = data;
   Name.innerHTML = name;
   const { temp } = data.main;
   Temp.innerHTML = Math.floor(temp - 273);
   const { description } = data.weather[0];
   des.innerHTML = description;
+  const icon = data.weather[0].icon;
+  const imgURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+  res.src = imgURL;
 }
